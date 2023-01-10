@@ -14,6 +14,9 @@ const getAbsoluteDistance = (numberOne, numberTwo) => Math.abs(numberOne - numbe
 
 
 const compareGuesses = (userGuess, computerGuess, secretTarget) => {
+    if (userGuess > 9) {
+        alert('It’s not possible to set a number outside the range: 0 to 9');
+    }
     const getTie = getAbsoluteDistance(userGuess, computerGuess);
     const getCloserUser = getAbsoluteDistance(userGuess, secretTarget);
     const getCloserComputer = getAbsoluteDistance(computerGuess, secretTarget);
